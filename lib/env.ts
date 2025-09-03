@@ -9,14 +9,14 @@ const envSchema = z.object({
   SHOPIFY_ADMIN_API_ACCESS_TOKEN: z.string().min(1),
   SHOPIFY_API_VERSION: z.string().min(1),
   
-  // Email Configuration
-  SMTP_HOST: z.string().min(1),
-  SMTP_PORT: z.string().transform(Number),
-  SMTP_USER: z.string().min(1),
-  SMTP_PASS: z.string().min(1),
+  // Email Configuration - Optional for development
+  SMTP_HOST: z.string().min(1).optional(),
+  SMTP_PORT: z.string().transform(Number).optional(),
+  SMTP_USER: z.string().min(1).optional(),
+  SMTP_PASS: z.string().min(1).optional(),
   
   // App Configuration
-  NEXT_PUBLIC_SITE_URL: z.string().url(),
+  NEXT_PUBLIC_SITE_URL: z.string().url().optional().default('http://localhost:3000'),
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
 });
 
