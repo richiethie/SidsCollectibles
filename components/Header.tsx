@@ -206,7 +206,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="ml-1 md:ml-3 flex flex-col">
                   <span className="text-xl font-bold text-gray-900 leading-none">
-                    SidsCollectibles
+                    SidsCollectible
                   </span>
                   <span className="hidden md:block mt-1 text-xs text-gray-500 leading-none">
                     Premium Pokémon Cards
