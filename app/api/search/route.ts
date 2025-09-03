@@ -1,6 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { shopifyClient } from '@/lib/shopify/storefront';
 
+// Define the response type for the search query
+interface SearchProductsResponse {
+  products: {
+    edges: Array<{
+      node: {
+        id: string;
+        title: string;
+        handle: string;
+        description: string;
+        images: {
+          edges: Array<{
+            node: {
+              url: string;
+              altText?: string;
+            };
+          }>;
+        };
+        variants: {
+          edges: Array<{
+            node: {
+              id: string;
+              title: string;
+              price?: {
+                amount: string;
+                currencyCode: string;
+              };
+              availableForSale: boolean;
+              quantityAvailable?: number;
+            };
+          }>;
+        };
+        tags: string[];
+        productType?: string;
+      };
+    }>;
+  };
+}
+
 const SEARCH_PRODUCTS_QUERY = `
   query searchProducts($query: String!, $first: Int!) {
     products(query: $query, first: $first) {
@@ -53,12 +91,12 @@ export async function GET(request: NextRequest) {
       }, { status: 400 });
     }
 
-    const result = await shopifyClient.request(SEARCH_PRODUCTS_QUERY, {
+    const result = await shopifyClient.request<SearchProductsResponse>(SEARCH_PRODUCTS_QUERY, {
       query: query.trim(),
       first: Math.min(limit, 50), // Cap at 50 results
     });
 
-    const products = result.products.edges.map((edge: any) => {
+    const products = result.products.edges.map((edge) => {
       const product = edge.node;
       const variant = product.variants.edges[0]?.node;
       const image = product.images.edges[0]?.node;
