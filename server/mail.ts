@@ -231,7 +231,7 @@ export async function sendRepairRequestConfirmation(
 export async function sendRepairRequestNotification(
   repairRequest: RepairRequest,
   requestId: string,
-  staffEmail: string = env.SMTP_USER
+  staffEmail: string = env.SMTP_USER || 'admin@sidscollectibles.com'
 ): Promise<boolean> {
   try {
     const transporter = createTransporter();
