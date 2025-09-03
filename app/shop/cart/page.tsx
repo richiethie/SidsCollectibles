@@ -52,7 +52,7 @@ export default function CartPage() {
               <span>/</span>
               <span className="text-gray-900">Cart</span>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Shopping Cart</h1>
           </div>
         </div>
 
@@ -146,7 +146,7 @@ export default function CartPage() {
               <span>/</span>
               <span className="text-gray-900">Cart</span>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Shopping Cart</h1>
           </div>
         </div>
 
@@ -188,8 +188,8 @@ export default function CartPage() {
           </div>
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
-              <p className="text-gray-600 mt-1">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Shopping Cart</h1>
+              <p className="text-gray-600 text-base md:text-lg mt-1">
                 {getTotalItemCount()} item{getTotalItemCount() !== 1 ? 's' : ''} in your cart
               </p>
             </div>
@@ -490,7 +490,7 @@ export default function CartPage() {
               <button
                 onClick={goToCheckout}
                 disabled={!cartState.checkoutUrl || cartState.items.length === 0}
-                className="w-full mt-6 bg-blue-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors shadow-sm hover:shadow-md text-base sm:text-base"
+                className="w-full mt-6 cursor-pointer bg-blue-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors shadow-sm hover:shadow-md text-base sm:text-base"
               >
                 Proceed to Checkout
               </button>

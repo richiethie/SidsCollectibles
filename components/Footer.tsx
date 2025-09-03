@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Facebook, Star, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { FaEtsy } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -46,9 +47,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center p-3 bg-gray-800 rounded-lg text-gray-300 hover:text-orange-400 hover:bg-gray-700 transition-colors group"
                 >
-                  <svg className="w-5 h-5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9.16 1.2c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14z"/>
-                  </svg>
+                  <FaEtsy className="w-5 h-5 mr-3 flex-shrink-0" />
                   <div>
                     <span className="font-medium text-white block">Etsy Store</span>
                     <span className="text-sm text-gray-400">Secure Checkout</span>
@@ -72,7 +71,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="lg:block hidden">
-            <h3 className="text-lg font-semibold mb-6 text-white">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/shop" className="text-gray-300 hover:text-blue-400 transition-colors">

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
+import { FaEtsy } from 'react-icons/fa';
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,20 +72,18 @@ export default function HomePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12 px-4 sm:px-0">
-                <a
-                  href="https://www.facebook.com/SidsCollectiblesShop"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/shop"
                   className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors text-center shadow-sm"
                 >
                   Browse Collection
-                </a>
-                <a
-                  href="#services"
+                </Link>
+                <Link
+                  href="/repairs"
                   className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition-colors text-center"
                 >
                   Our Services
-                </a>
+                </Link>
               </div>
               
               {/* Trust Indicators */}
@@ -210,10 +209,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
-              Shop Our Current Inventory
+              Shop On Other Platforms
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Browse our collection across multiple trusted platforms while our main store is being built
+              Browse our collection across multiple trusted platforms
             </p>
           </div>
           
@@ -247,9 +246,7 @@ export default function HomePage() {
               className="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-shadow"
             >
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0">
-                <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9.16 1.2c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14zm5.68 0c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14z"/>
-                </svg>
+                <FaEtsy className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 text-center sm:text-left">Etsy Store</h3>
               <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base text-center sm:text-left">
@@ -308,9 +305,9 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Professional restoration for damaged cards including edge repair, surface cleaning, and crease removal while preserving authenticity.
               </p>
-              <button className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
+              <Link href="/repairs" className="text-green-600 hover:text-green-700 font-medium text-sm sm:text-base">
                 Learn More →
-              </button>
+              </Link>
             </div>
 
             {/* Grading Prep */}
@@ -324,9 +321,9 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Optimize your cards for professional grading with expert cleaning, assessment, and preparation services.
               </p>
-              <button className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base">
+              <Link href="/repairs" className="text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base">
                 Learn More →
-              </button>
+              </Link>
             </div>
 
             {/* Appraisal */}
@@ -340,9 +337,9 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 Accurate valuations for insurance, estate planning, or sale purposes based on current market conditions.
               </p>
-              <button className="text-purple-600 hover:text-purple-700 font-medium text-sm sm:text-base">
+              <Link href="/repairs" className="text-purple-600 hover:text-purple-700 font-medium text-sm sm:text-base">
                 Learn More →
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -435,9 +432,7 @@ export default function HomePage() {
               <span>Facebook: SidsCollectiblesShop</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-3 sm:w-4 h-3 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9.16 1.2c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14z"/>
-              </svg>
+              <FaEtsy className="w-3 sm:w-4 h-3 sm:h-4" />
               <span>Etsy: SidsCollectiblesShop</span>
             </div>
             <div className="flex items-center gap-2">

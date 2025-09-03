@@ -8,19 +8,19 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-gray-900">About</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">About SidsCollectibles</h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mt-2">Learn more about our story and mission</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">About SidsCollectibles</h1>
+          <p className="text-base md:text-lg text-gray-600 mt-2">Learn more about our story and mission</p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-12">
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6 md:p-8">
           {/* Tagline */}
           <div className="text-center mb-8">

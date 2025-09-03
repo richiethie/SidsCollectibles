@@ -3,20 +3,21 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { FaEtsy } from 'react-icons/fa';
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-gray-900">Contact</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Contact Us</h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mt-2">Get in touch with our team</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Contact Us</h1>
+          <p className="text-base md:text-lg text-gray-600 mt-2">Get in touch with us</p>
         </div>
       </div>
 
@@ -113,9 +114,7 @@ export default function ContactPage() {
                   className="flex items-center space-x-3 bg-white border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-md transition-shadow"
                 >
                   <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9.16 1.2c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14z"/>
-                    </svg>
+                    <FaEtsy className="w-4 h-4 text-orange-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 text-xs sm:text-sm">Etsy</p>

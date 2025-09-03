@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Form from '@/components/Form';
 import { RepairRequest } from '@/types/shopify';
+import { FaEtsy } from 'react-icons/fa';
 
 export default function RepairsPage() {
   const handleSubmit = async (data: RepairRequest) => {
@@ -32,14 +33,14 @@ export default function RepairsPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-gray-900">Repairs</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900">Card Repair Services</h1>
-          <p className="text-lg text-gray-600 mt-2">Professional trading card restoration and repair services</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Card Repair Services</h1>
+          <p className="text-base md:text-lg text-gray-600 mt-2">Professional trading card restoration and repair services</p>
         </div>
       </div>
 
@@ -228,9 +229,7 @@ export default function RepairsPage() {
               <span>Facebook: SidsCollectiblesShop</span>
             </div>
             <div className="flex items-center gap-2">
-              <svg className="w-3 sm:w-4 h-3 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9.16 1.2c-.63 0-1.14.51-1.14 1.14v.78c0 .63.51 1.14 1.14 1.14.63 0 1.14-.51 1.14-1.14v-.78c0-.63-.51-1.14-1.14-1.14z"/>
-              </svg>
+              <FaEtsy className="w-3 sm:w-4 h-3 sm:h-4" />
               <span>Etsy: SidsCollectiblesShop</span>
             </div>
           </div>
