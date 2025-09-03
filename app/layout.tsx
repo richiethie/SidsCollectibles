@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Sid's Collectibles - Antiques & Repair Services",
+    default: "Sid's Collectibles - Premium Pokémon Cards & Repair Services",
     template: "%s | Sid's Collectibles"
   },
-  description: 'Your trusted source for high-quality collectibles, antiques, and professional repair services. Specializing in preserving the value and beauty of your precious items.',
-  keywords: ['antiques', 'collectibles', 'repair services', 'restoration', 'vintage items', 'collectible shop'],
+  description: 'Your trusted destination for premium Pokémon cards, expert restoration services, and professional grading preparation. Specializing in authentic collectibles and card repair.',
+  keywords: ['pokemon cards', 'pokemon', 'trading cards', 'card repair', 'card restoration', 'grading preparation', 'authentic cards', 'collectibles', 'tcg'],
   authors: [{ name: "Sid's Collectibles" }],
   creator: "Sid's Collectibles",
   publisher: "Sid's Collectibles",
@@ -30,22 +30,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: "Sid's Collectibles - Antiques & Repair Services",
-    description: 'Your trusted source for high-quality collectibles, antiques, and professional repair services.',
+    title: "Sid's Collectibles - Premium Pokémon Cards & Repair Services",
+    description: 'Your trusted destination for premium Pokémon cards, expert restoration services, and professional grading preparation.',
     siteName: "Sid's Collectibles",
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Sid's Collectibles - Antiques & Repair Services",
+        alt: "Sid's Collectibles - Premium Pokémon Cards & Repair Services",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Sid's Collectibles - Antiques & Repair Services",
-    description: 'Your trusted source for high-quality collectibles, antiques, and professional repair services.',
+    title: "Sid's Collectibles - Premium Pokémon Cards & Repair Services",
+    description: 'Your trusted destination for premium Pokémon cards, expert restoration services, and professional grading preparation.',
     images: ['/og-image.jpg'],
   },
   robots: {
