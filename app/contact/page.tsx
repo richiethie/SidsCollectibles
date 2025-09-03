@@ -209,7 +209,7 @@ export default function ContactPage() {
                 }
 
                 .contact-form select {
-                  background-image: url(&quot;data:image/svg+xml,%3csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; fill=&apos;none&apos; viewBox=&apos;0 0 20 20&apos;%3e%3cpath stroke=&apos;%236b7280&apos; stroke-linecap=&apos;round&apos; stroke-linejoin=&apos;round&apos; stroke-width=&apos;1.5&apos; d=&apos;m6 8 4 4 4-4&apos;/%3e%3c/svg%3e&quot;) !important;
+                  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
                   background-position: right 12px center !important;
                   background-repeat: no-repeat !important;
                   background-size: 20px 20px !important;
@@ -345,7 +345,7 @@ export default function ContactPage() {
                     rows={4}
                     required
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base resize-vertical"
-                    placeholder=&quot;Tell us about what you&apos;re looking for or how we can help...&quot;
+                    placeholder="Tell us about what you're looking for or how we can help..."
                   ></textarea>
                 </div>
 
