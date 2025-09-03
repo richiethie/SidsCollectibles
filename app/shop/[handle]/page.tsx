@@ -6,14 +6,15 @@ import Image from 'next/image'
 import AddToCartButton from '@/components/AddToCartButton'
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     handle: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   try {
-    const product = await getProductByHandle(await params.handle)
+    const resolvedParams = await params
+    const product = await getProductByHandle(resolvedParams.handle)
     if (!product) {
       return {
         title: 'Product Not Found - Sid\'s Collectibles',
@@ -38,7 +39,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   let error = null
 
   try {
-    product = await getProductByHandle(await params.handle)
+    const resolvedParams = await params
+    product = await getProductByHandle(resolvedParams.handle)
     if (!product) {
       notFound()
     }
