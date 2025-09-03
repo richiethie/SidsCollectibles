@@ -5,7 +5,7 @@ import { RepairRequest } from '@/types/shopify';
 
 // Create transporter for sending emails
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: env.SMTP_HOST,
     port: env.SMTP_PORT,
     secure: env.SMTP_PORT === 465, // true for 465, false for other ports
