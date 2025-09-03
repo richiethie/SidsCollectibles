@@ -61,11 +61,11 @@ export default function AboutPage() {
 
               <p className="leading-relaxed text-sm sm:text-base text-left">
                 The connection to Pokémon cards came as my faith journey continued. I was working nights 
-                at the factory because daycare was $3,000 a month (which we couldn't afford), homeschooling 
+                at the factory because daycare was $3,000 a month (which we couldn&apos;t afford), homeschooling 
                 my kids during the day, while my wife worked as well. I was selling cards on the side and 
                 getting into card repair work. As I reached a physical breaking point from the factory labor, 
-                I prayed: "Ok God, if you want me to leave this job and do the Pokémon cards store, 
-                let it make at least $2,000 a month." At that time, I was only making around $1,600 monthly 
+                I prayed: &ldquo;Ok God, if you want me to leave this job and do the Pokémon cards store, 
+                let it make at least $2,000 a month.&rdquo; At that time, I was only making around $1,600 monthly 
                 at the factory job.
               </p>
 
@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <div className="flex-1 sm:text-center">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 text-left sm:text-center">Community</h3>
                     <p className="text-gray-600 leading-relaxed text-sm md:px-2 text-left sm:text-center">
-                      We're passionate about building and supporting the Pokémon collecting community.
+                      We&apos;re passionate about building and supporting the Pokémon collecting community.
                     </p>
                   </div>
                 </div>
@@ -245,8 +245,8 @@ export default function AboutPage() {
                 mission of serving the Pokémon collecting community.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base font-medium text-left">
-                Whether you're looking to buy your first card or need professional restoration services 
-                for a treasured collection, we're here to serve you with integrity, expertise, and 
+                Whether you&apos;re looking to buy your first card or need professional restoration services 
+                for a treasured collection, we&apos;re here to serve you with integrity, expertise, and 
                 genuine care. God bless you and happy collecting!
               </p>
               <div className="mt-4 sm:mt-6 text-left">
