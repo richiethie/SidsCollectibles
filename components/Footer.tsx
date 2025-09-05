@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="lg:block hidden">
-            <h3 className="text-lg font-semibold mb-6 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-7 text-white">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/shop" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -101,6 +101,11 @@ const Footer: React.FC = () => {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  FAQ
                 </Link>
               </li>
             </ul>
@@ -236,6 +241,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link href="/returns" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors text-center sm:text-left">
                 Returns & Refunds
+
               </Link>
             </div>
           </div>
