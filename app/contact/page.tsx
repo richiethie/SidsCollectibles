@@ -17,7 +17,7 @@ export default function ContactPage() {
             <span className="text-gray-900">Contact</span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Contact Us</h1>
-          <p className="text-base md:text-lg text-gray-600 mt-2">Get in touch with us</p>
+          <p className="text-base md:text-lg text-gray-600 mt-2">Jeremiah 33:3 "Call to me and I will answer you and tell you great and unsearchable things you do not know"</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">Availability</h3>
-                  <p className="text-gray-600 text-sm sm:text-base">Monday - Sunday</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Monday - Saturday</p>
                   <p className="text-xs sm:text-sm text-gray-500">We work around your schedule - reach out anytime</p>
                 </div>
               </div>
