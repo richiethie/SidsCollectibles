@@ -11,7 +11,7 @@ export default function HomePage() {
   const [featuredProducts, setFeaturedProducts] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   // Fetch featured products on component mount
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
@@ -19,7 +19,7 @@ export default function HomePage() {
         setIsLoading(true);
         const response = await fetch('/api/featured?limit=6');
         const data = await response.json();
-        
+
         if (data.success) {
           setFeaturedProducts(data.products);
         } else {
@@ -39,7 +39,7 @@ export default function HomePage() {
   // Auto-rotate featured products if available
   useEffect(() => {
     if (featuredProducts.length === 0) return;
-    
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredProducts.length);
     }, 5000);
@@ -48,30 +48,25 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 lg:py-28">
+
+      {/* Hero Section - moved up and condensed */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white pt-4 pb-8 sm:pt-6 sm:pb-12 lg:pt-8 lg:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            
-            {/* Left Content */}
-            <div className="text-left order-1 lg:order-2">
-              <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-50 text-blue-700 text-xs sm:text-sm font-medium rounded-full mb-6 sm:mb-8 border border-blue-200">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mr-1.5 sm:mr-2"></div>
-                Live inventory available now
-              </div>
-              
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+            {/* Left Content: Title and Actions */}
+            <div className="flex-1">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-2 sm:mb-3 leading-tight">
                 Premium Pokémon Cards & 
                 <span className="text-blue-600"> Professional Services</span>
               </h1>
-              
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
+
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
                 Discover rare cards, get expert restoration services, and build your collection with confidence. 
                 Trusted by collectors nationwide.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12 px-4 sm:px-0">
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start mb-6 px-0">
                 <Link
                   href="/shop"
                   className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors text-center shadow-sm"
@@ -85,26 +80,10 @@ export default function HomePage() {
                   Our Services
                 </Link>
               </div>
-              
-              {/* Trust Indicators */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-gray-200 max-w-md mx-auto lg:max-w-none">
-                <div className="text-center">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">1000+</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Cards Sold</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Repairs Done</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">100%</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Satisfied</div>
-                </div>
-              </div>
             </div>
 
             {/* Right Content - Featured Card */}
-            <div className="flex justify-center order-2 lg:order-2 lg:justify-end">
+            <div className="flex-1 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-xs sm:max-w-sm">
                 {isLoading ? (
                   <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 sm:p-8 w-full animate-pulse">
@@ -183,7 +162,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Card Indicators */}
                 {featuredProducts.length > 1 && (
                   <div className="flex justify-center mt-4 sm:mt-6 space-x-2">
@@ -204,6 +183,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Etsy Highlights Section - expanded horizontally and centered */}
+      <section className="py-8 sm:py-10 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch justify-center">
+            <div className="bg-gradient-to-r from-purple-700 via-blue-500 to-yellow-300 rounded-xl shadow-lg border border-yellow-200 p-6 flex flex-col items-center text-center">
+              <FaEtsy className="w-8 h-8 text-orange-400 mb-2 drop-shadow" />
+              <span className="text-xl font-bold text-yellow-300 drop-shadow mb-1">Etsy Highlights</span>
+              <span className="text-lg font-bold text-white mb-2">
+                Over <span className="text-yellow-300">1000+</span> Etsy Sales!
+              </span>
+              <span className="text-base text-blue-100 mb-2">
+                Trusted by collectors worldwide for fast shipping, premium cards, and top-rated service.
+              </span>
+              <a
+                href="https://www.etsy.com/shop/SidsCollectiblesShop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block bg-yellow-300 text-purple-700 font-bold px-4 py-1 rounded-full shadow hover:bg-purple-700 hover:text-yellow-300 transition"
+              >
+                Visit Our Etsy Store
+              </a>
+            </div>
+            <div className="bg-white bg-opacity-80 rounded-lg px-4 py-6 flex flex-col items-center shadow justify-center">
+              <span className="text-purple-700 font-bold text-2xl mb-1">1000+</span>
+              <span className="text-sm text-gray-700">Cards Sold</span>
+            </div>
+            <div className="bg-white bg-opacity-80 rounded-lg px-4 py-6 flex flex-col items-center shadow justify-center">
+              <span className="text-blue-700 font-bold text-2xl mb-1">500+</span>
+              <span className="text-sm text-gray-700">Repairs Done</span>
+              <span className="text-yellow-500 font-bold text-xl mt-2">100% Satisfied</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Platforms Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,7 +229,7 @@ export default function HomePage() {
               Browse our collection across multiple trusted platforms
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Facebook */}
             <a
@@ -356,7 +370,7 @@ export default function HomePage() {
               Built by collectors, for collectors, with a focus on quality, authenticity, and exceptional service.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-12 sm:w-16 h-12 sm:h-16 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
@@ -369,7 +383,7 @@ export default function HomePage() {
                 Every card is carefully inspected and verified for authenticity. We stand behind every item we sell.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-12 sm:w-16 h-12 sm:h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <svg className="w-6 sm:w-8 h-6 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -381,7 +395,7 @@ export default function HomePage() {
                 Professional packaging with tracking and insurance. Your cards arrive safe and sound.
               </p>
             </div>
-            
+
             <div className="text-center sm:col-span-2 lg:col-span-1">
               <div className="w-12 sm:w-16 h-12 sm:h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <svg className="w-6 sm:w-8 h-6 sm:h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -406,7 +420,7 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
             Whether you're looking to buy, sell, or need professional card services, we're here to help you every step of the way.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
             <a
               href="https://www.facebook.com/SidsCollectiblesShop"
