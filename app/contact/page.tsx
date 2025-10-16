@@ -16,8 +16,8 @@ export default function ContactPage() {
             <span>/</span>
             <span className="text-gray-900">Contact</span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Contact Us</h1>
-          <p className="text-base md:text-lg text-gray-600 mt-2">Jeremiah 33:3 "Call to me and I will answer you and tell you great and unsearchable things you do not know"</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-purple-700">Contact Us</h1>
+          <p className="text-base md:text-lg text-blue-600 mt-2">Jeremiah 33:3 "Call to me and I will answer you and tell you great and unsearchable things you do not know"</p>
         </div>
       </div>
 
